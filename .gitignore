@@ -1,5 +1,5 @@
 # Python Virtual Environment
-venv_py312/
+venv/
 .venv/ # Add this too in case you use it later
 
 # Python cache files
@@ -13,3 +13,6 @@ __pycache__/
 # IDE configuration folders
 .idea/
 .vscode/
+
+# Environment variables
+.env
