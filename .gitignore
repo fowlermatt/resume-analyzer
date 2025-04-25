@@ -1,6 +1,6 @@
 # Python Virtual Environment
 venv/
-.venv/ # Add this too in case you use it later
+.venv/
 
 # Python cache files
 __pycache__/
