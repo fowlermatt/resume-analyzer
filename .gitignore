@@ -1,0 +1,15 @@
+# Python Virtual Environment
+venv_py312/
+.venv/ # Add this too in case you use it later
+
+# Python cache files
+__pycache__/
+*.py[cod]
+*$py.class
+
+# OS-specific files
+.DS_Store
+
+# IDE configuration folders
+.idea/
+.vscode/
