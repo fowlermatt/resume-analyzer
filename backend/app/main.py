@@ -22,14 +22,6 @@ async def analyze_resume_and_jd(
     resume_file: UploadFile = File(..., description="Resume file (PDF or DOCX)"),
     job_description: str = Form(..., description="Job description text")
 ):
-    """
-    Analyzes the uploaded resume against the provided job description.
-
-    - Extracts text from the resume file.
-    - Extracts keywords from both the resume and job description.
-    - Compares keywords and calculates a match score.
-    - Returns matched keywords, missing keywords, and the score.
-    """
     if not resume_file.filename:
          raise HTTPException(status_code=400, detail="No resume file name found.")
 
@@ -50,7 +42,6 @@ async def analyze_resume_and_jd(
     if not resume_text:
         print(f"Warning: Resume file '{resume_file.filename}' parsed successfully but resulted in empty text.")
 
-    #Test Comment
 
 
     try:
@@ -73,7 +64,6 @@ async def analyze_resume_and_jd(
 
 @app.get("/", tags=["General"])
 async def read_root():
-    """Root endpoint providing basic API information."""
     return {"message": "Welcome to the Resume Analyzer API. Use the /docs endpoint for details."}
 
 if __name__ == "__main__":

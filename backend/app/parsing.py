@@ -3,16 +3,6 @@ import docx
 import io
 
 def extract_text_from_file(file_content: bytes, filename: str) -> str | None:
-    """
-    Extracts plain text from PDF or DOCX file content.
-
-    Args:
-        file_content: The raw byte content of the file.
-        filename: The original filename to determine the file type.
-
-    Returns:
-        The extracted text as a string, or None if extraction fails or format is unsupported.
-    """
     text = None
     try:
         if filename.lower().endswith(".pdf"):
